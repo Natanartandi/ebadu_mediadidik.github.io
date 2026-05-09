@@ -1,0 +1,770 @@
+body {
+      margin: 0;
+      background: #F2F2F2;
+      min-height: 100vh;
+      font-family: 'Be Vietnam Pro'; 
+      flex-direction: column;
+      display: flex;
+      
+  }
+  /*HEADER*/ 
+  header {
+    position: fixed;      
+    top: 0;               /* agar menempel di atas */
+    left: 225px;
+    width: calc(100% - 225px); /* lebar header = 100% - lebar sidebar */;          
+    height: 58px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+  }
+
+  .top-left {
+    display: flex;
+    align-items: center;
+    gap: 70px; /* jarak antar grup */
+    margin-left: 15px;
+  }
+
+  .button_menu {
+    width: 28px;
+    height: 28px;
+    display: block; 
+  }
+
+  .online {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-right: 15px;
+  }
+
+  .konten {
+    display: flex;
+    align-items: center; /* center logo & text */
+    gap: 20px;
+  }
+
+  .nama {
+    color: #000;
+    font-size: 12px;
+      font-weight: 400;
+  }
+
+  .notifikasi {
+    width: 18px;
+    cursor: pointer;
+  }
+
+  .icon_profil {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  /* SIDEBAR */
+  .sidebar {
+      position: fixed;
+    top: 0px;                 /* tinggi header */
+    width: 225px;
+    height: calc(100vh);
+    background: #1C4E92;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo_sma{
+    width: 200px;
+    display: block; 
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* jarak menu dari atas */
+    gap: 5px;
+  }
+
+  .sidebar li {
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;  
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 12px;
+    font-weight: 200;
+  }
+
+  .sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+  }
+
+  .sidebar li:hover {
+    background: #0F2A4F;
+  }
+
+  .sidebar .active {
+    background: #0F2A4F;
+  }
+
+  .button_sidebar{
+    flex: 1;
+    
+  }
+  .button_logout {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .logout {
+    list-style: none;
+    margin-bottom: 90px; 
+  }
+
+  .logout a {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;           
+    padding: 0; 
+    text-decoration: none;
+    color: white;
+  }
+
+  .icon_beranda{
+      width: 20px;
+      height: 20px;
+  }
+    
+  .icon_diskusi{
+      width: 20px;
+      height: 20px;
+  }
+      
+  .icon_rekapnilai{
+      width: 20px;
+      height: 20px;
+  }
+
+  .icon_rekappresensi{
+      width: 20px;
+      height: 20px;
+  }
+
+  .icon_pelanggaran{
+      width: 21px;
+      height: 18px;
+  }
+
+  .icon_pesan{
+      width: 24px;
+      height: 17.6px;
+  }
+
+  .icon_logout{
+      width: 24px;
+      height: 24px;
+  }
+
+  /* NAVBAR */
+  .navbar{
+    position: sticky; /* bukan fixed lagi */
+    top: 58px; 
+
+    width: calc(100% - 225px);
+    margin-left: 225px; 
+
+    background:#2059A5;
+    padding: 10px 30px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    z-index: 999;
+      box-sizing: border-box;
+  }
+
+  .navbar_atas{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:white;
+  }
+
+  .back h2{
+      font-size:16px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+
+  .icon_back{
+      width:10.48px;
+      height:23.35px;
+      cursor:pointer;
+  }
+
+  .content {
+  margin-left: 230px;
+  margin-top: 0px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 120px);
+}
+
+/* CARD */
+.card_tes {
+  background: #ffffff;
+  padding: 15px 30px;
+  border-radius: 12px;
+  width: 420px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 70px;
+}
+
+/* TEXT */
+.judul {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  color : #404040;
+  margin-bottom: 10px;
+}
+
+.sub_judul {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.tipe {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+/* BOX INFO */
+.info_box {
+  background: #F2F2F2;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.info_box .abu{
+  font-size: 12px;
+  color: #404040  ;
+  font-weight: 400;
+}
+
+.info_box .hitam{
+  font-size: 12px;
+  color: #000;
+  font-weight: 400;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* WARNING */
+.warning {
+  background: #CEE3FF;
+  border: 1px solid #9C9C9C;
+  padding: 15px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.nilai {
+  background: #CEE3FF;
+  border: 1px solid #9C9C9C;
+  padding: 15px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color:#000
+}
+
+/* BUTTON */
+.btn_mulai {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background: #2C7BE5;
+  color: #fff;
+  margin-top: 10px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;
+   text-decoration: none;
+}
+
+.btn_mulai:hover {
+  background: #0F2A4F;
+}
+
+/* SOAL */
+/* CONTAINER UTAMA */
+.container_soal {
+  background: #ffffff;
+  width: 900px;
+  border-radius: 12px;
+  padding: 25px 30px;
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* TOP BAR */
+.top_soal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0px;
+}
+
+.timer {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.kanan_top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.progress {
+  font-size: 12px;
+}
+
+.btn_nomor {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #404040;
+  font-size: 12px;
+  font-weight: 400;
+  background: transparent;
+  cursor: pointer;
+}
+
+ .divider {
+    height: 1px;
+    background: #ddd;
+    margin: 15px 0;
+  }
+
+/* ISI SOAL */
+.isi_soal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nomor {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.instruksi {
+  font-size: 13px;
+}
+
+.paragraf {
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.pertanyaan {
+  font-size: 13px;
+}
+
+/* OPSI */
+.opsi {
+  border: 1px solid #000000;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-bottom: 25px;
+}
+
+.opsi:hover {
+  background: #f2f2f2;
+}
+
+.opsi.aktif {
+  background: #DCFFF1;
+  border: 1px solid #333;
+}
+
+/* FOOTER */
+.footer_soal {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn_prev {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  padding: 12px 18px;
+  border-radius: 8px;
+   border: 1px solid #2C7BE5;
+  color: #2C7BE5;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.disabled {
+  border: 1px solid #D1E5FF;
+  color: #D1E5FF;
+  cursor: not-allowed;
+}
+
+.btn_next.akhir {
+  color: #E51E1E;
+  border: 2px solid #E51E1E;
+  background: transparent;
+  width: 290px;
+}
+
+.btn_next.akhir:hover {
+  background: #E51E1E;
+  color: white;
+}
+
+.btn_next {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  padding: 12px 80px;
+  border-radius: 8px;
+  border: none;
+  background: #2C7BE5;
+  color: white;
+  cursor: pointer;
+}
+
+.btn_next:hover {
+  background: #0F2A4F;
+}
+
+/* POPUP NOMOR SOAL */
+.popup_nomor {
+  display: none;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* GRID NOMOR */
+.grid_nomor {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* BOX ANGKA */
+.box_nomor {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* ACTIVE */
+.box_nomor.aktif {
+  background: #2C7BE5;
+  color: white;
+}
+
+/* nomor sudah dijawab */
+.box_nomor.terjawab {
+  background: #3CD09C;
+  color: white;
+}
+
+/* BUTTON AKHIR */
+.aksi_popup {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_akhir {
+  background: #2C7BE5;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn_akhir.disabled {
+  background: #c8d8ea;
+  cursor: not-allowed;
+  color: #fff;
+}
+
+ footer {
+    margin-left: 230px; 
+    padding: 15px 30px;
+    text-align: center;
+    color: #505050;
+    font-size: 12px;
+    font-weight: 300;
+  }
+
+ /* ===== TABLET ===== */
+@media (max-width: 1280px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 450px) and (max-height: 932px)  {
+
+    /* HEADER FULL */
+  .header {
+     left: 0;
+    width: 100%;
+    padding: 14px 10px;
+  }
+
+  .nama{
+      display: none;
+    }
+
+    .top-left {
+    gap: 20px; /* jarak antar grup */
+    margin-left: 2px;
+  }
+
+  .top-right {
+    gap: 20px; /* jarak antar grup */
+    margin-right: 2px;
+  }
+
+  /* NAVBAR FULL */
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+      padding: 10.5px 15px;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      gap:8px;
+  }
+
+  .back h2{
+      font-size:12px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+  .icon_back{
+      width:10px;
+      height:19px;
+  }
+
+   .sidebar {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    width: 225px;
+    height: calc(100% - 58px); /* biar tidak nutup header */
+    background: #1C4E92;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo_sma {
+    width: 160px; /* kecilkan biar muat */
+    margin: 10px auto;
+    display: block;
+  }
+
+    /* CONTENT FULL */
+  .content {
+    margin-left: 0;
+    padding: 15px;
+    margin-top: 22px;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 150px;
+  }
+
+  /* CONTAINER SOAL */
+.container_soal{
+  width: 100%;
+  padding: 18px 16px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+
+/* TOP */
+.top_soal{
+  gap: 10px;
+}
+
+.timer{
+  font-size: 14px;
+}
+
+.progress{
+  font-size: 11px;
+}
+
+.btn_nomor{
+  padding: 10px 15px;
+  font-size: 12px;
+}
+
+ .paragraf {
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+
+.nomor{
+  font-size: 14px;
+}
+
+.instruksi,
+.paragraf,
+.pertanyaan{
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* OPSI */
+.opsi{
+  padding: 14px 12px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+/* FOOTER BUTTON */
+.footer_soal{
+  gap: 10px;
+}
+
+.btn_prev,
+.btn_next{
+  flex: 1;
+  padding: 14px 10px;
+  font-size: 13px;
+}
+
+/* BUTTON AKHIR */
+.btn_next.akhir{
+  width: 100%;
+}
+
+  .card_tes{
+    margin-top: 150px;
+    padding: 15px 15px;
+  }
+
+  .judul{
+  font-size: 20px;
+  margin-bottom: 4px;
+  }
+
+  .sub_judul{
+    font-size: 16px;
+  }
+
+  .tipe{
+    font-size: 13px;
+  }
+
+  .info_box .abu{
+    font-size: 12px;
+  }
+
+  .info_box .hitam{
+    font-size: 12px;
+  }
+
+   /* FOOTER FULL */
+  footer {
+    margin-left: 0;
+    margin-bottom: 35px;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Tugas</title>
+    <link rel="stylesheet" href="tambah.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+    <header class="header">
+        <div class="top-left">
+            <img src="Menu Hambuger.png" class="button_menu" alt="menu">
+            <span class="online">Online 15</span>
+        </div>
+        <div class="top-right">
+            <img src="icon_notif.png" class="notifikasi" alt="notifikasi">
+            <div class="konten">
+            <span class="nama">Nama Guru Ebadu</span>
+            <img src="User.png" class="icon_profil" alt="profil">
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar_atas">
+
+            <a href="management_tugas.html" class="back">
+                <img src="icon_back.png" class="icon_back">
+                <h2>Kembali</h2>
+            </a>
+
+        </div>
+    </nav>
+  
+    <div class="main">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="logo_SMA.png" class="logo_sma">
+            </div>
+        <ul class="button_sidebar">
+            <li class="active">
+            <a href="beranda_siswa.html">
+                <img src="icon_beranda.png" class="icon_beranda">
+                <span>Beranda</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_diskusi.png" class="icon_diskusi">
+                <span>Ruang Diskusi</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pengumuman.png" class="icon_pengumuman">
+                <span>Pengumuman</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pesertadidik.png" class="icon_pesertadidik">
+                <span>Peserta Didik</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_laporan.png" class="icon_laporan">
+                <span>Laporan Mengajar</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pelanggaran.png" class="icon_pelanggaran">
+                <span>Laporan Pelanggaran</span>
+            </a>
+            </li>
+        </ul>
+        <ul class="button_logout">
+            <li class="logout">
+            <a href="index.html">
+                <img src="icon_logout.png" class="icon_logout">
+                <span>Keluar</span>
+            </a>
+            </li>
+        </ul>
+        </aside>
+    </div>
+
+    <main class="content">
+        <div class="card_form">
+            <h2 class="judul_form">Tambah Tugas Bahasa Indonesia</h2>
+            <hr>
+
+            <!-- Judul -->
+            <div class="form_group">
+                <label>Judul</label>
+                <input type="text" placeholder="Masukkan judul tugas">
+            </div>
+
+            <!-- Soal -->
+            <div class="form_group">
+                <label>Soal/Perintah</label>
+                <textarea placeholder="Masukkan soal atau instruksi"></textarea>
+            </div>
+
+            <!-- Tanggal + Jam -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Tanggal Terbit Otomatis</label>
+                    <input type="datetime-local">
+                </div>
+
+                <div class="form_group">
+                    <label>Tanggal Tutup</label>
+                    <input type="datetime-local">
+                </div>
+            </div>
+
+                <!-- Tahun & Semester -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Tahun Ajaran</label>
+                    <select class="select_form" required>
+                        <option value="" disabled selected hidden>Pilih Tahun Ajaran</option>
+                        <option value="2025">2025/2026</option>
+                        <option value="2026">2024/2025</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label>Semester</label>
+                    <select class="select_form" required>
+                        <option value="" disabled selected hidden>Pilih Semester</option>
+                        <option value="Ganjil">Ganjil</option>
+                        <option value="Genap">Genap</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Model & Kelas -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Model Pengumpulan</label>
+                    <select class="select_form" required>
+                        <option value="" disabled selected hidden>Pilih Model Pengumpulan</option>
+                        <option value="Foto">Unggah foto tulisan jawban</option>
+                        <option value="File">Unggah file zip/pdf.doc/excel/ppt</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label>Kelas Penerima</label>
+                    <select class="select_form" required>
+                        <option value="" disabled selected hidden>Pilih Kelas</option>
+                        <option value="FD">XI FD 1</option>
+                        <option value="FC">XI FC</option>
+                    </select>
+                </div>
+            </div>
+
+                <hr>
+
+                <!-- Button -->
+            <div class="form_action">
+                <a href="management_tugas_terbit.html" class="btn biru">Simpan dan Terbitkan</a>
+                <a href="management_tugas_konsep.html" class="btn kuning">Simpan ke Konsep</a>
+            </div>
+
+        </div>
+     
+    </main>
+
+  <footer>
+      Copyright @ 2026 SMAN 2 BANGUNTAPAN. All Rights Reserved
+    </footer>
+    
+
+</body>
+
+</html>

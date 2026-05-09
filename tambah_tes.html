@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Tes</title>
+    <link rel="stylesheet" href="tambah.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- HEADER -->
+    <header class="header">
+        <div class="top-left">
+            <img src="Menu Hambuger.png" class="button_menu" alt="menu">
+            <span class="online">Online 15</span>
+        </div>
+        <div class="top-right">
+            <img src="icon_notif.png" class="notifikasi" alt="notifikasi">
+            <div class="konten">
+            <span class="nama">Nama Guru Ebadu</span>
+            <img src="User.png" class="icon_profil" alt="profil">
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar_atas">
+
+            <a href="management_tes.html" class="back">
+                <img src="icon_back.png" class="icon_back">
+                <h2>Kembali</h2>
+            </a>
+
+        </div>
+    </nav>
+  
+    <div class="main">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="logo">
+                <img src="logo_SMA.png" class="logo_sma">
+            </div>
+        <ul class="button_sidebar">
+            <li class="active">
+            <a href="beranda_siswa.html">
+                <img src="icon_beranda.png" class="icon_beranda">
+                <span>Beranda</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_diskusi.png" class="icon_diskusi">
+                <span>Ruang Diskusi</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pengumuman.png" class="icon_pengumuman">
+                <span>Pengumuman</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pesertadidik.png" class="icon_pesertadidik">
+                <span>Peserta Didik</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_laporan.png" class="icon_laporan">
+                <span>Laporan Mengajar</span>
+            </a>
+            </li>
+            <li>
+            <a href="kosong.html">
+                <img src="icon_pelanggaran.png" class="icon_pelanggaran">
+                <span>Laporan Pelanggaran</span>
+            </a>
+            </li>
+        </ul>
+        <ul class="button_logout">
+            <li class="logout">
+            <a href="index.html">
+                <img src="icon_logout.png" class="icon_logout">
+                <span>Keluar</span>
+            </a>
+            </li>
+        </ul>
+        </aside>
+    </div>
+
+    <main class="content">
+        <div class="card_form">
+            <h2 class="judul_form">Tambah Tes Bahasa Indonesia</h2>
+            <hr>
+
+            <!-- Judul -->
+            <div class="form_group">
+                <label>Judul</label>
+                <input type="text" placeholder="Masukkan judul tes">
+            </div>
+
+            <!-- Deskripsi -->
+            <div class="form_group">
+                <label>Deskripsi</label>
+                <textarea placeholder="Masukkan deskripsi"></textarea>
+            </div>
+
+            <p class="helper_text">Akan ditampilkan pada halaman Peserta Didik</p>
+
+        <!-- DURASI -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Durasi</label>
+                    <input type="number">
+                    <span class="helper_text">Dalam Menit</span>
+                </div>
+
+                <div class="form_group">
+                    <label>Durasi Minimal</label>
+                    <input type="number">
+                    <span class="helper_text">
+                    Dalam Menit. Digunakan untuk menonaktifkan tombol selesai tes pada peserta tes sebelum durasi minimal terpenuhi.
+                    </span>
+                </div>
+            </div>
+
+            <!-- URUTAN SOAL -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Urutan Soal</label>
+                    <select class="select_form">
+                    <option disabled selected hidden>Pilih Urutan Soal</option>
+                    <option>Acak</option>
+                    <option>Berurutan</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label>Jumlah Soal Tampil</label>
+                    <input type="number">
+                    <span class="helper_text">
+                    Merupakan jumlah soal yang disajikan ke peserta tes.
+                    </span>
+                </div>
+            </div>
+
+                <!-- JUMLAH PER JENIS -->
+            <div class="form_group">
+                <label>Jumlah Soal Tampil Per Jenis</label>
+
+                <div class="jenis_container">
+
+                    <div class="jenis_row">
+                        <span>Pilihan Ganda</span>
+                        <input type="number">
+                    </div>
+
+                    <div class="jenis_row">
+                        <span>Pilihan Ganda Kompleks</span>
+                        <input type="number">
+                    </div>
+
+                    <div class="jenis_row">
+                        <span>Uraian/Esai</span>
+                        <input type="number">
+                    </div>
+
+                    <div class="jenis_row">
+                        <span>Benar/Salah</span>
+                        <input type="number">
+                    </div>
+
+                    <div class="jenis_row">
+                        <span>Menjodohkan</span>
+                        <input type="number">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- TANGGAL -->
+            <div class="form_row">
+                <div class="form_group">
+                    <label>Tanggal Terbit Otomatis</label>
+                    <input type="datetime-local">
+                </div>
+
+                <div class="form_group">
+                    <label>Tanggal Tutup Otomatis</label>
+                    <input type="datetime-local">
+                </div>
+            </div>
+
+            <hr>
+
+                <!-- TARGET -->
+        <div class="form_row">
+            <div class="form_group">
+                <label>Target Peserta</label>
+                <select class="select_form">
+                <option disabled selected hidden>Peserta Didik Kelas Tertentu</option>
+                </select>
+            </div>
+
+            <div class="form_group">
+                <label>Kelas Penerima</label>
+                <select class="select_form">
+                <option disabled selected hidden>Pilih Kelas Penerima</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form_group">
+            <label>Pengecualian Peserta Didik</label>
+            <select class="select_form">
+                <option disabled selected hidden>Cari Peserta Didik yang Dikecualikan</option>
+            </select>
+        </div>
+
+            <hr>
+
+        <div class="form_group">
+            <label>Admin Tes</label>
+            <select class="select_form">
+                <option disabled selected hidden>Pilih Admin Tes</option>
+            </select>
+            <span class="helper_text">Admin tes merupakan pengajar yang dapat ikut mengelola tes ini.</span>
+        </div>
+
+            <hr>
+
+        <div class="form_group">
+            <label>Label Tes</label>
+            <select class="select_form">
+                <option disabled selected hidden>Pilih Label Tes</option>
+            </select>
+        </div>
+
+            <hr>
+
+        <div class="form_row">
+            <div class="form_group">
+                <label>Tampilkan Nilai ke Peserta</label>
+                <select class="select_form">
+                <option disabled selected hidden>Pilih</option>
+                </select>
+            </div>
+
+            <div class="form_group">
+                <label>Tampilkan Jawaban ke Peserta</label>
+                <select class="select_form">
+                <option disabled selected hidden>Pilih</option>
+                </select>
+            </div>
+        </div>
+
+            <hr>
+
+        <div class="form_row">
+            <div class="form_group">
+                <label>Kata Sandi Tes</label>
+                <input type="password">
+            </div>
+
+            <div class="form_group">
+                <label>Konfirmasi Kata Sandi Tes</label>
+                <input type="password">
+            </div>
+        </div>
+
+        <div class="form_row">
+
+            <div class="form_group toggle_group">
+                <label>Otomatis Logout</label>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+            <div class="form_group toggle_group">
+                <label>Tes Dapat Diulang</label>
+                    <label class="switch">
+                    <input type="checkbox">
+                <span class="slider"></span>
+                </label>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <!-- Button -->
+        <div class="form_action">
+            <a href="management_tes_terbit.html" class="btn biru">Simpan dan Terbitkan</a>
+            <a href="management_tes_konsep.html" class="btn kuning">Simpan ke Konsep</a>
+        </div>
+     
+    </main>
+
+  <footer>
+      Copyright @ 2026 SMAN 2 BANGUNTAPAN. All Rights Reserved
+    </footer>
+    
+
+</body>
+
+</html>

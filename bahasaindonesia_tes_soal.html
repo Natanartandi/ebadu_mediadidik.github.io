@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahasa Indonesia Tes Kerjakan</title>
+    <link rel="stylesheet" href="bahasaindonesia_tes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- HEADER -->
+  <header class="header">
+    <div class="top-left">
+      <img src="Menu Hambuger.png" class="button_menu" alt="menu">
+      <span class="online">Online 15</span>
+    </div>
+    <div class="top-right">
+      <img src="icon_notif.png" class="notifikasi" alt="notifikasi">
+      <div class="konten">
+        <span class="nama">Nama Siswa Ebadu</span>
+        <img src="User.png" class="icon_profil" alt="profil">
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar_atas">
+
+        <a href="bahasaindonesia_tes.html" class="back">
+            <img src="icon_back.png" class="icon_back">
+            <h2>Kembali</h2>
+        </a>
+    </div>
+  </nav>
+
+    <!-- SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+    <div class="logo">
+      <img src="logo_SMA.png" class="logo_sma">
+    </div>
+    <ul class="button_sidebar">
+      <li class="active">
+        <a href="beranda_siswa.html">
+          <img src="icon_beranda.png" class="icon_beranda">
+          <span>Beranda</span>
+        </a>
+      </li>
+      <li>
+        <a href="kosong.html">
+          <img src="icon_diskusi.png" class="icon_diskusi">
+          <span>Ruang Diskusi</span>
+        </a>
+      </li>
+      <li>
+        <a href="kosong.html">
+          <img src="icon_rekapnilai.png" class="icon_rekapnilai">
+          <span>Rekap Nilai</span>
+        </a>
+      </li>
+      <li>
+        <a href="kosong.html">
+          <img src="icon_rekappresensi.png" class="icon_rekappresensi">
+          <span>Rekap Presensi</span>
+        </a>
+      </li>
+      <li>
+        <a href="kosong.html">
+          <img src="icon_pelanggaran.png" class="icon_pelanggaran">
+          <span>Point Pelanggaran</span>
+        </a>
+      </li>
+      <li>
+        <a href="kosong.html">
+          <img src="icon_pesan.png" class="icon_pesan">
+          <span>Pesan</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="button_logout">
+        <li class="logout"><a href="index.html"><img src="icon_logout.png" class="icon_logout"><span>Keluar</span></a></li>
+    </ul>
+  </aside>
+
+   <!-- CONTENT -->
+  <main class="content">
+    <div class="container_soal">
+        <!-- TOP BAR -->
+        <div class="top_soal">
+          <span class="timer">00:52:24</span>
+
+          <div class="kanan_top">
+              <span class="progress">0/5 Soal Dijawab</span>
+              <button class="btn_nomor">No. Soal</button>
+          </div>
+        </div>
+
+        <!--POP UP NOMOR-->
+      <div class="popup_nomor" id="popupNomor">
+
+        <div class="grid_nomor">
+            <div class="box_nomor aktif">1</div>
+            <div class="box_nomor">2</div>
+            <div class="box_nomor">3</div>
+            <div class="box_nomor">4</div>
+            <div class="box_nomor">5</div>
+        </div>
+
+        <div class="aksi_popup">
+            <button class="btn_akhir">Akhiri Tes</button>
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <!-- SOAL -->
+      <div class="isi_soal">
+
+        <p class="nomor">Soal no 1 dari 5</p>
+
+        <p class="instruksi">Bacalah paragraf berikut dengan cermat!</p>
+
+        <p class="paragraf">
+          Setiap pagi, Rina selalu menyempatkan diri untuk membaca buku selama 15 menit sebelum berangkat ke sekolah. 
+          Kebiasaan ini membuatnya semakin luas pengetahuannya dan mampu mengikuti pelajaran dengan baik di kelas. 
+          Selain itu, ia juga menjadi lebih percaya diri saat berdiskusi dengan teman-temannya.
+        </p>
+
+        <p class="pertanyaan">
+          Berdasarkan paragraf tersebut, manfaat utama dari kebiasaan yang dilakukan Rina adalah...
+        </p>
+
+        <!-- PILIHAN -->
+        <div class="opsi" onclick="pilihJawaban(this)">A. ...</div>
+        <div class="opsi" onclick="pilihJawaban(this)">B. ...</div>
+        <div class="opsi" onclick="pilihJawaban(this)">C. ...</div>
+        <div class="opsi" onclick="pilihJawaban(this)">D. ...</div>
+        <div class="opsi" onclick="pilihJawaban(this)">E. ...</div>
+
+      </div>
+
+      <!-- FOOTER -->
+      <div class="footer_soal">
+        <button class="btn_prev">Soal Sebelumnya</button>
+        <button class="btn_next">Soal Selanjutnya</button>
+      </div>
+
+    
+
+    </div>
+  </main>
+
+  <footer>
+      Copyright @ 2026 SMAN 2 BANGUNTAPAN. All Rights Reserved
+  </footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  // ===== POPUP NOMOR =====
+  const btnNomor = document.querySelector(".btn_nomor");
+  const popup = document.getElementById("popupNomor");
+  const btnAkhir = document.querySelector(".btn_akhir");
+
+  btnNomor.addEventListener("click", () => {
+    popup.style.display =
+      popup.style.display === "block" ? "none" : "block";
+  });
+
+  // ===== DATA SOAL =====
+  const soal = [
+    {
+      nomor: "Soal no 1 dari 5",
+      teks: "Bacalah paragraf berikut dengan cermat!",
+      paragraf: " Setiap pagi, Rina selalu menyempatkan diri untuk membaca buku selama 15 menit sebelum berangkat ke sekolah. Kebiasaan ini membuatnya semakin luas pengetahuannya dan mampu mengikuti pelajaran dengan baik di kelas. Selain itu, ia juga menjadi lebih percaya diri saat berdiskusi dengan teman-temannya.",
+      tanya: "Berdasarkan paragraf tersebut, manfaat utama dari kebiasaan yang dilakukan Rina adalah…",
+      opsi: ["A. Membuat Rina memiliki lebih banyak waktu bermain bersama teman-temannya", 
+            "B. Menjadikan Rina lebih cepat berangkat ke sekolah setiap pagi", 
+            "C. Membantu Rina memperluas pengetahuan dan meningkatkan kepercayaan diri", 
+            "D. Mengurangi waktu istirahat Rina di pagi hari sebelum sekolah", 
+            "E. Membuat Rina menjadi lebih sering membaca buku di perpustakaan"]
+    },
+    {
+      nomor: "Soal no 2 dari 5",
+      teks: "Perhatikan teks berikut!",
+      paragraf: "Lingkungan yang bersih sangat penting untuk menjaga kesehatan masyarakat. Sampah yang menumpuk dapat menjadi sumber penyakit dan mencemari lingkungan sekitar. Oleh karena itu, setiap individu perlu memiliki kesadaran untuk menjaga kebersihan dengan cara membuang sampah pada tempatnya.",
+      tanya: "Gagasan utama dari teks tersebut adalah…",
+      opsi: ["A. Sampah dapat mencemari lingkungan sekitar", 
+            "B. Pentingnya menjaga kebersihan lingkungan untuk kesehatan", 
+            "C. Setiap individu harus membuang sampah pada tempatnya", 
+            "D. Lingkungan yang kotor dapat menyebabkan berbagai penyakit", 
+            "E. Kesadaran masyarakat terhadap kebersihan masih rendah"]
+    },
+    {
+      nomor: "Soal no 3 dari 5",
+      teks: "Bacalah kalimat berikut!",
+      paragraf: "Para siswa diminta untuk mengumpulkan tugas tepat waktu agar dapat melatih kedisiplinan dan tanggung jawab dalam belajar.",
+      tanya: "Makna yang terkandung dalam kalimat tersebut adalah…",
+      opsi: ["A. Siswa harus selalu mengerjakan tugas di sekolah bersama teman-temannya", 
+            "B. Pengumpulan tugas tepat waktu dapat membantu siswa menjadi lebih disiplin dan bertanggung jawab", 
+            "C. Tugas yang diberikan guru harus dikerjakan secara berkelompok", 
+            "D. Siswa diperbolehkan mengumpulkan tugas kapan saja tanpa batas waktu", 
+            "E. Guru memberikan tugas hanya untuk mengisi waktu belajar siswa"]
+    },
+    {
+      nomor: "Soal no 4 dari 5",
+      teks: "Bacalah paragraf berikut!",
+      paragraf: "Teknologi digital saat ini berkembang sangat pesat dan memengaruhi berbagai aspek kehidupan manusia, termasuk dalam bidang pendidikan. Penggunaan perangkat digital seperti laptop dan smartphone memudahkan siswa dalam mengakses informasi dan belajar secara mandiri",
+      tanya: "Kesimpulan yang tepat dari paragraf tersebut adalah…",
+      opsi: ["A. eknologi digital hanya digunakan untuk hiburan semata", 
+            "B. Perkembangan teknologi tidak memberikan dampak pada pendidikan", 
+            "C. Teknologi digital memberikan kemudahan dalam proses belajar siswa", 
+            "D. Smartphone hanya digunakan oleh siswa untuk bermain game", 
+            "E. Laptop merupakan satu-satunya alat belajar yang efektif"]
+    },
+    {
+      nomor: "Soal no 5 dari 5",
+      teks: "Bacalah teks berikut!",
+      paragraf: "Kerja sama merupakan salah satu nilai penting dalam kehidupan bermasyarakat. Dengan bekerja sama, pekerjaan yang berat akan terasa lebih ringan dan dapat diselesaikan dengan lebih cepat. Selain itu, kerja sama juga dapat mempererat hubungan antarindividu.",
+      tanya: "Tujuan penulisan teks tersebut adalah…",
+      opsi: ["A. Menjelaskan dampak negatif dari kerja sama dalam masyarakat", 
+            "B. Menggambarkan pentingnya kerja sama dalam kehidupan sehari-hari", 
+            "C. Membandingkan kerja sama dengan persaingan antarindividu", 
+            "D. Menjelaskan cara bekerja sama dalam kelompok besar", 
+            "E. Mengkritik masyarakat yang tidak mau bekerja sama"]
+    }
+  ];
+
+  let index = 0;
+
+  const nomor = document.querySelector(".nomor");
+  const instruksi = document.querySelector(".instruksi");
+  const paragraf = document.querySelector(".paragraf");
+  const pertanyaan = document.querySelector(".pertanyaan");
+  const opsiEl = document.querySelectorAll(".opsi");
+
+  // ===== GRID NOMOR =====
+  const boxNomor = document.querySelectorAll(".box_nomor");
+  let jawabanUser = new Array(soal.length).fill(false);
+
+  function updateGridNomor() {
+    boxNomor.forEach((box, i) => {
+      box.classList.remove("aktif", "terjawab");
+
+      if (i === index) {
+        box.classList.add("aktif");
+      } else if (jawabanUser[i]) {
+        box.classList.add("terjawab");
+      }
+    });
+  }
+
+  // klik nomor
+  boxNomor.forEach((box, i) => {
+    box.addEventListener("click", () => {
+      index = i;
+      tampilSoal();
+    });
+  });
+
+  // ===== CEK SEMUA TERJAWAB =====
+  function semuaTerjawab() {
+    return jawabanUser.every(j => j === true);
+  }
+
+  function updateBtnAkhir() {
+    if (semuaTerjawab()) {
+      btnAkhir.disabled = false;
+      btnAkhir.classList.remove("disabled");
+    } else {
+      btnAkhir.disabled = true;
+      btnAkhir.classList.add("disabled");
+    }
+  }
+
+  // klik tombol akhiri
+  btnAkhir.addEventListener("click", () => {
+    if (semuaTerjawab()) {
+      if (confirm("Semua soal sudah dijawab. Akhiri tes?")) {
+        window.location.href = "bahasaindonesia_tes.html";
+      }
+    }
+  });
+
+  // ===== TAMPILKAN SOAL =====
+  function tampilSoal() {
+    const s = soal[index];
+
+    nomor.innerText = s.nomor;
+    instruksi.innerText = s.teks;
+    paragraf.innerText = s.paragraf;
+    pertanyaan.innerText = s.tanya;
+
+    opsiEl.forEach((el, i) => {
+      el.innerText = s.opsi[i];
+      el.classList.remove("aktif");
+    });
+
+    updateTombol();
+    updateGridNomor();
+  }
+
+  // ===== TOMBOL =====
+  function updateTombol() {
+    const prev = document.querySelector(".btn_prev");
+    const next = document.querySelector(".btn_next");
+
+    if (index === 0) {
+      prev.disabled = true;
+      prev.classList.add("disabled");
+    } else {
+      prev.disabled = false;
+      prev.classList.remove("disabled");
+    }
+
+    if (index === soal.length - 1) {
+      next.innerText = "Akhiri Tes";
+      next.classList.add("akhir");
+    } else {
+      next.innerText = "Soal Selanjutnya";
+      next.classList.remove("akhir");
+    }
+  }
+
+  // ===== PILIH JAWABAN =====
+  window.pilihJawaban = function (el) {
+    opsiEl.forEach(o => o.classList.remove("aktif"));
+    el.classList.add("aktif");
+
+    jawabanUser[index] = true;
+
+    updateGridNomor();
+    updateBtnAkhir(); // 🔥 ini penting
+  };
+
+  // ===== NEXT =====
+  document.querySelector(".btn_next").addEventListener("click", () => {
+    if (index < soal.length - 1) {
+      index++;
+      tampilSoal();
+    } else {
+      if (confirm("Yakin ingin mengakhiri tes?")) {
+        window.location.href = "bahasaindonesia_tes.html";
+      }
+    }
+  });
+
+  // ===== PREV =====
+  document.querySelector(".btn_prev").addEventListener("click", () => {
+    if (index > 0) {
+      index--;
+      tampilSoal();
+    }
+  });
+
+  tampilSoal();
+  updateBtnAkhir(); // 🔥 kondisi awal
+});
+</script>
+
+</body>
+</html>

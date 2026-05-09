@@ -1,0 +1,590 @@
+body {
+    margin: 0;
+    background: #F2F2F2;
+     height: 100vh;
+     font-family: 'Be Vietnam Pro'; 
+     
+}
+/*HEADER*/ 
+header {
+  position: fixed;      
+  top: 0;               /* agar menempel di atas */
+  left: 225px;
+  width: calc(100% - 225px); /* lebar header = 100% - lebar sidebar */;          
+  height: 58px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+   box-sizing: border-box;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* jarak antar grup */
+  margin-left: 15px;
+}
+
+.button_menu {
+  width: 28px;
+  height: 28px;
+  display: block; 
+}
+
+.online {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-right: 60px;
+  margin-right: 15px;
+}
+
+.konten {
+  display: flex;
+  align-items: center; /* center logo & text */
+  gap: 20px;
+}
+
+.nama {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.notifikasi {
+  width: 18px;
+  cursor: pointer;
+}
+
+.icon_profil {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+   top: 0px;                 /* tinggi header */
+  width: 225px;
+  height: calc(100vh);
+  background: #1C4E92;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_sma{
+  width: 200px;
+  display: block; 
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* jarak menu dari atas */
+  gap: 5px;
+}
+
+.sidebar li {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;  
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar li a span {
+  white-space: nowrap;  /* biar teks 1 baris */
+}
+
+.sidebar li:hover {
+  background: #0F2A4F;
+}
+
+.sidebar .active {
+  background: #0F2A4F;
+}
+
+.button_sidebar{
+  flex: 1;
+  
+}
+.button_logout {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logout {
+  list-style: none;
+  margin-bottom: 90px; 
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;           
+ padding: 0; /* area klik */
+  text-decoration: none;
+  color: white;
+}
+
+.icon_beranda{
+    width: 20px;
+    height: 20px;
+}
+  
+.icon_diskusi{
+    width: 20px;
+    height: 20px;
+}
+    
+.icon_pengumuman{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_pesertadidik{
+    width: 23px;
+    height: 20px;
+}
+
+.icon_laporan{
+    width: 20px;
+    height: 18px;
+}
+
+.icon_pelanggaran{
+    width: 25px;
+    height: 20px;
+}
+
+.icon_logout{
+    width: 24px;
+    height: 24px;
+}
+
+/* NAVBAR */
+.navbar{
+  position: sticky; /* bukan fixed lagi */
+  top: 58px; 
+
+  width: calc(100% - 225px);
+  margin-left: 225px; 
+
+  background:#2059A5;
+  padding: 10px 30px;
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+  z-index: 999;
+    box-sizing: border-box;
+}
+
+.navbar_atas{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/* BUTTON BACK */
+.back{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+}
+
+.back h2{
+    font-size:16px;
+    font-weight:300;
+}
+
+/* ICON BACK */
+
+.icon_back{
+    width:10.48px;
+    height:23.35px;
+    cursor:pointer;
+}
+
+/* SEARCH */
+.search_bar {
+   background: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.search_bar input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+}
+
+.search_button {
+  border: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.content {
+  margin-left: 225px; /* lebar content*/
+  margin-top: 50px;   /* jarak atas */
+  padding: 0 35px;  /* kanan kiri content */
+  background: #F2F2F2;
+}
+
+.content_materi{
+  margin-left: 225px; /* lebar content*/
+  margin-top: 65px;   /* jarak atas */
+  padding: 0 35px;  /* kanan kiri content */
+  background: #F2F2F2;
+}
+
+/* MENU FILTER */
+.navbar_menu {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  background: #F2F2F2;
+  padding: 15px 0;
+  margin-bottom: 25px;
+}
+
+.menu {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu.active {
+  background: #0F2A4F;
+  color: white;
+  font-weight: 600;
+}
+
+/* LIST */
+.list_siswa {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* CARD */
+.card_siswa {
+  background: white;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* NAMA */
+.card_siswa h3 {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* BODY FLEX */
+.card_body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* GROUP INFO */
+.info_group {
+  display: flex;
+  gap: 20px;
+}
+
+/* BOX */
+.info_box {
+   border: 1px solid #D9D9D9;
+  border-radius: 10px;
+  min-width: 200px;
+  height: 90px; 
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  text-align: center;
+  padding: 0; 
+}
+
+.info_box span {
+  font-size: 12px;
+  color: #505050;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.info_box p {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* AKSI */
+.dropdown_aksi {
+  position: relative;
+  margin-left: auto;
+}
+
+.dropdown_aksi_btn {
+  font-family: 'Be Vietnam Pro';  
+  background: #444444;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 450;
+  width: 150px;
+}
+
+/* DROPDOWN */
+.dropdown_aksi_menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 48px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.dropdown_aksi_menu a {
+  display: block;
+  padding: 10px 54px;
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown_aksi_menu a:hover {
+  background: #f2f2f2;
+}
+
+.dropdown_aksi.active .dropdown_aksi_menu {
+  display: block;
+}
+footer {
+   margin-left: 230px; 
+  padding: 15px 30px;
+  text-align: center;
+  color: #505050;
+  font-size: 12px;
+  font-weight: 300;
+  
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1280px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 450px) and (max-height: 932px)  {
+
+  body{
+  overflow-x: hidden;
+}
+
+    /* HEADER FULL */
+  .header {
+     left: 0;
+    width: 100%;
+    padding: 14px 15px;
+  }
+
+  .nama{
+      display: none;
+    }
+
+    .top-left {
+    gap: 20px; /* jarak antar grup */
+    margin-left: 2px;
+  }
+
+  .top-right {
+    gap: 20px; /* jarak antar grup */
+    margin-right: 2px;
+  }
+
+  /* NAVBAR FULL */
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+      padding: 8px 15px;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      gap:8px;
+  }
+
+  .back h2{
+      font-size:12px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+  .icon_back{
+      width:10px;
+      height:19px;
+  }
+
+  .search_bar {
+    width: 280px;
+    height: 40px;
+  }
+
+   .sidebar {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    width: 225px;
+    height: calc(100% - 58px); /* biar tidak nutup header */
+    background: #1C4E92;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo_sma {
+    width: 160px; /* kecilkan biar muat */
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* CONTENT FULL */
+  .content {
+    margin-left: 0;
+  padding: 15px;
+  margin-top: 22px;
+}
+
+  /* MENU FILTER MOBILE */
+.navbar_menu {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 6px;
+
+    padding: 12px 0;
+    margin: 18px 0 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+
+    padding: 0px 4px;
+
+    border-radius: 50px;
+
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.2;
+
+    text-align: center;
+    text-decoration: none;
+
+    color: #000;
+
+    margin: 0;
+
+    word-break: break-word;
+}
+
+/* CARD SISWA MOBILE */
+.card_body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+}
+
+.info_group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    width: 100%;
+}
+
+.info_box {
+    min-width: unset;
+    width: 100%;
+    height: 82px;
+
+    box-sizing: border-box;
+}
+
+  footer {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+  }
+}

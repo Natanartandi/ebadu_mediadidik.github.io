@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+    background: #F2F2F2;
+     min-height: 100vh;
+     font-family: 'Be Vietnam Pro'; 
+     flex-direction: column;
+     display: flex;
+     
+}
+/*HEADER*/ 
+.header {
+  position: fixed;      
+  top: 0;               /* agar menempel di atas */
+  left: 225px;
+  width: calc(100% - 225px); /* lebar header = 100% - lebar sidebar */;          
+  height: 58px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* jarak antar grup */
+  margin-left: 15px;
+}
+
+.button_menu {
+  width: 28px;
+  height: 28px;
+  display: block; 
+}
+
+.online {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-right: 15px;
+}
+
+.konten {
+   display: flex;
+  align-items: center; /* center logo & text */
+  gap: 20px;
+}
+
+.nama {
+  color: #000;
+  font-size: 12px;
+  font-weight: 200;
+    font-weight: 400;
+}
+
+.notifikasi {
+  width: 18px;
+  cursor: pointer;
+}
+
+.icon_profil {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+   top: 0px;                 /* tinggi header */
+  width: 225px;
+  height: calc(100vh);
+  background: #1C4E92;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_sma{
+  width: 200px;
+  display: block; 
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* jarak menu dari atas */
+  gap: 5px;
+}
+
+.sidebar li {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;  
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar li:hover {
+  background: #0F2A4F;
+}
+
+.sidebar .active {
+  background: #0F2A4F;
+}
+
+.button_sidebar{
+  flex: 1;
+  
+}
+.button_logout {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.logout {
+  list-style: none;
+  margin-bottom: 90px; 
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;           
+ padding: 0; /* area klik */
+  text-decoration: none;
+  color: white;
+}
+
+.icon_beranda{
+    width: 20px;
+    height: 20px;
+}
+  
+.icon_diskusi{
+    width: 20px;
+    height: 20px;
+}
+    
+.icon_rekapnilai{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_rekappresensi{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_pelanggaran{
+    width: 21px;
+    height: 18px;
+}
+
+.icon_pesan{
+    width: 24px;
+    height: 17.6px;
+}
+
+.icon_logout{
+    width: 24px;
+    height: 24px;
+}
+
+/* HALAMAN KOSONG */
+/* CONTENT */
+.content{
+    position: fixed;
+
+    top: 58px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* HALAMAN KOSONG */
+.box_kosong{
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box_kosong h1{
+    max-width: 1100px;
+
+    font-size: 42px;
+    font-weight: 700;
+    color: #000;
+    line-height: 1.4;
+    margin-bottom: 40px;
+}
+
+.btn_kembali{
+    text-decoration: none;
+    color: #2F73E0;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+
+/* ===== TABLET ===== */
+@media (max-width: 1280px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 450px) and (max-height: 932px)  {
+
+    /* HEADER FULL */
+  .header {
+     left: 0;
+    width: 100%;
+    padding: 14px 15px;
+  }
+
+  .nama{
+      display: none;
+    }
+
+    .top-left {
+    gap: 20px; /* jarak antar grup */
+    margin-left: 2px;
+  }
+
+  .top-right {
+    gap: 20px; /* jarak antar grup */
+    margin-right: 2px;
+  }
+
+  /* NAVBAR FULL */
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+      padding: 8px 15px;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      gap:8px;
+  }
+
+  .back h2{
+      font-size:12px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+  .icon_back{
+      width:10px;
+      height:19px;
+  }
+
+
+   .sidebar {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    width: 225px;
+    height: calc(100% - 58px); /* biar tidak nutup header */
+    background: #1C4E92;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo_sma {
+    width: 160px; /* kecilkan biar muat */
+    margin: 10px auto;
+    display: block;
+  }
+
+  .content{
+    margin-left: 0;
+    width: 100%;
+}
+
+.box_kosong h1{
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.btn_kembali{
+    font-size: 18px;
+}
+
+
+  /* FOOTER FULL */
+  footer {
+    margin-left: 0;
+    margin-bottom: 35px;
+  }
+
+}

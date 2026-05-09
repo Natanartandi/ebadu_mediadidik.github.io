@@ -1,0 +1,654 @@
+    body {
+        margin: 0;
+        background: #F2F2F2;
+        height: 100vh;
+        font-family: 'Be Vietnam Pro'; 
+        
+    }
+    /*HEADER*/ 
+    header {
+    position: fixed;      
+    top: 0;               /* agar menempel di atas */
+    left: 225px;
+    width: calc(100% - 225px); /* lebar header = 100% - lebar sidebar */;          
+    height: 58px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    box-sizing: border-box;
+    }
+
+    .top-left {
+    display: flex;
+    align-items: center;
+    gap: 70px; /* jarak antar grup */
+    margin-left: 15px;
+    }
+
+    .button_menu {
+    width: 28px;
+    height: 28px;
+    display: block; 
+    }
+
+    .online {
+    color: #000;
+    font-size: 12px;
+    font-weight: 500;
+    }
+
+    .top-right {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    margin-right: 60px;
+    margin-right: 15px;
+    }
+
+    .konten {
+    display: flex;
+    align-items: center; /* center logo & text */
+    gap: 20px;
+    }
+
+    .nama {
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+    }
+
+    .notifikasi {
+    width: 18px;
+    cursor: pointer;
+    }
+
+    .icon_profil {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+        position: fixed;
+    top: 0px;                 /* tinggi header */
+    width: 225px;
+    height: calc(100vh);
+    background: #1C4E92;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .logo_sma{
+    width: 200px;
+    display: block; 
+    margin-top: 15px;
+    margin-left: 10px;
+    }
+
+    .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px; /* jarak menu dari atas */
+    gap: 5px;
+    }
+
+    .sidebar li {
+    padding: 5px 25px;
+    display: flex;
+    align-items: center;  
+    cursor: pointer;
+    transition: 0.1s;
+    font-size: 12px;
+    font-weight: 200;
+    }
+
+    .sidebar li a {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+    height: 50px;
+    text-decoration: none;
+    color: white;
+    }
+
+    .sidebar li a span {
+    white-space: nowrap;  /* biar teks 1 baris */
+    }
+
+    .sidebar li:hover {
+    background: #0F2A4F;
+    }
+
+    .sidebar .active {
+    background: #0F2A4F;
+    }
+
+    .button_sidebar{
+    flex: 1;
+    
+    }
+    .button_logout {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+
+    .logout {
+    list-style: none;
+    margin-bottom: 90px; 
+    }
+
+    .logout a {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 100%;           
+    padding: 0; /* area klik */
+    text-decoration: none;
+    color: white;
+    }
+
+    .icon_beranda{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .icon_diskusi{
+        width: 20px;
+        height: 20px;
+    }
+        
+    .icon_pengumuman{
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon_pesertadidik{
+        width: 23px;
+        height: 20px;
+    }
+
+    .icon_laporan{
+        width: 20px;
+        height: 18px;
+    }
+
+    .icon_pelanggaran{
+        width: 25px;
+        height: 20px;
+    }
+
+    .icon_logout{
+        width: 24px;
+        height: 24px;
+    }
+
+    /* NAVBAR */
+    .navbar{
+    position: sticky; /* bukan fixed lagi */
+    top: 58px; 
+
+    width: calc(100% - 225px);
+    margin-left: 225px; 
+
+    background:#2059A5;
+    padding: 10px 30px;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+
+    z-index: 999;
+        box-sizing: border-box;
+    }
+
+    .navbar_atas{
+        display:flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+
+    /* BUTTON BACK */
+    .back{
+        display:flex;
+        align-items:center;
+        gap:12px;
+        text-decoration:none;
+        color:white;
+    }
+
+    .back h2{
+        font-size:16px;
+        font-weight:300;
+    }
+
+    /* ICON BACK */
+
+    .icon_back{
+        width:10.48px;
+        height:23.35px;
+        cursor:pointer;
+    }
+
+    .content {
+    margin-left: 225px; /* lebar content*/
+    margin-top: 65px;   /* jarak atas */
+    padding: 0 35px;  /* kanan kiri content */
+    background: #F2F2F2;
+    }
+
+    /* CARD FORM */
+    .card_form {
+    background: #ffffff;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    }
+
+    .judul_form {
+    font-size: 20px;
+    font-weight: 450;
+    margin-bottom: 10px;
+    color: #404040;
+    }
+
+    .card_form hr {
+    border: none;
+    border-top: 1px solid #D9D9D9;
+    margin: 15px 0 25px;
+    }
+
+    /* FORM */
+    /* FORM GROUP */
+    .form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    }
+
+    .form_group label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #404040;
+    }
+
+    /* SELECT */
+    .select_form {
+    padding: 10px;
+    border: 1px solid #9C9C9C;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Be Vietnam Pro';
+    background: #fff;
+    color: #000;
+    cursor: pointer;
+    }
+
+    /* WARNA DEFAULT (placeholder) */
+    .select_form:invalid {
+    color: #9C9C9C;
+    }
+
+    /* OPTION */
+    .select_form option {
+    color: #000;
+    }
+
+    /* DATE TIME */
+    input[type="datetime-local"] {
+    padding: 10px;
+    border: 1px solid #9C9C9C;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Be Vietnam Pro';
+    width: 100%;
+    box-sizing: border-box;
+    color: #000;
+    }
+
+    /* ROW 2 KOLOM */
+    .form_row {
+    display: flex;
+    gap: 20px;
+    }
+
+    .form_action{
+        color:#9C9C9C;
+    }
+
+    .form_row .form_group {
+    flex: 1;
+    }
+
+    .form_group input,
+    .form_group select,
+    .form_group textarea,
+    .form_group input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #9C9C9C;
+    border-radius: 6px;
+    font-size: 13px;
+    font-family: 'Be Vietnam Pro';
+    color: #404040;
+    box-sizing: border-box;
+    }
+
+    /* TEXTAREA KHUSUS */
+    .form_group textarea {
+    height: 140px;
+    resize: none;
+    }
+
+    /* PLACEHOLDER */
+    .form_group input::placeholder,
+    .form_group textarea::placeholder {
+    color: #9C9C9C;
+    }
+
+    /* BUTTON */
+    .form_action {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+    }
+
+    .btn {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 450;
+    cursor: pointer;
+    display: flex;              
+    align-items: center;        
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    }
+
+    .biru {
+    background: #2F6FED;
+    color: white;
+    }
+
+    .biru:hover {
+    background: #1f56c7;
+    }
+
+    .kuning {
+    background: #FFD84D;
+    color: black;
+    }
+
+    .kuning:hover {
+    background: #e6c33f;
+    }
+
+    /* HELPER TEXT */
+.helper_text {
+  font-size: 11px;
+  color: #8A8A8A;
+  margin-top: 5px;
+}
+
+/* JENIS SOAL */
+.jenis_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.jenis_row span {
+  font-size: 13px;
+}
+
+.jenis_row input {
+  width: 80px;
+}
+
+/* TOGGLE */
+.toggle_group {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* jarak label dan switch */
+  justify-content: flex-start;
+}
+
+.toggle_group input {
+  width: 40px;
+  height: 20px;
+}
+
+/* CONTAINER JENIS */
+.jenis_container {
+  border-top: 1px solid #D9D9D9;
+}
+
+/* ROW JENIS */
+.jenis_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #D9D9D9;
+}
+
+/* TEXT */
+.jenis_row span {
+  font-size: 14px;
+  color: #404040;
+}
+
+/* INPUT KECIL */
+.jenis_row input {
+  width: 70px;
+  padding: 6px;
+  border: 1px solid #9C9C9C;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* HAPUS GARIS TERAKHIR */
+.jenis_row:last-child {
+  border-bottom: none;
+}
+
+/* SWITCH */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 22px;
+}
+
+/* sembunyikan checkbox asli */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #CFCFCF;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* bulatan */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 2px;
+  top: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* saat aktif */
+.switch input:checked + .slider {
+  background-color: #2F6FED;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+footer {
+    margin-left: 230px; 
+    padding: 15px 30px;
+    text-align: center;
+    color: #505050;
+    font-size: 12px;
+    font-weight: 300;
+    }
+
+    /* ===== TABLET ===== */
+@media (max-width: 1280px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 450px) and (max-height: 932px)  {
+
+  body{
+  overflow-x: hidden;
+}
+
+    /* HEADER FULL */
+  .header {
+     left: 0;
+    width: 100%;
+    padding: 14px 15px;
+  }
+
+  .nama{
+      display: none;
+    }
+
+    .top-left {
+    gap: 20px; /* jarak antar grup */
+    margin-left: 2px;
+  }
+
+  .top-right {
+    gap: 20px; /* jarak antar grup */
+    margin-right: 2px;
+  }
+
+  /* NAVBAR FULL */
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+      padding: 8px 15px;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      gap:8px;
+  }
+
+  .back h2{
+      font-size:12px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+  .icon_back{
+      width:10px;
+      height:19px;
+  }
+
+   .sidebar {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    width: 225px;
+    height: calc(100% - 58px); /* biar tidak nutup header */
+    background: #1C4E92;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo_sma {
+    width: 160px; /* kecilkan biar muat */
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* CONTENT FULL */
+  .content {
+    margin-left: 0;
+  padding: 15px;
+  margin-top: 12px;
+}
+
+.card_form{
+  margin-bottom: 5px;
+}
+
+.judul_form {
+    font-size: 19px;
+    }
+
+.form_row{
+    flex-direction: column;
+    gap: 0;
+}
+
+.biru {
+  font-size: 14px;
+  padding: 12px 7px;
+  }
+
+    .kuning {
+    font-size: 14px;
+    padding: 12px 7px;
+    }
+
+footer {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+  }
+}

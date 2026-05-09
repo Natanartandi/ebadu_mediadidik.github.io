@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Tugas Tutup</title>
+    <link rel="stylesheet" href="management.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="top-left">
+      <img src="Menu Hambuger.png" class="button_menu" alt="menu">
+      <span class="online">Online 15</span>
+    </div>
+    <div class="top-right">
+      <img src="icon_notif.png" class="notifikasi" alt="notifikasi">
+      <div class="konten">
+        <span class="nama">Nama Guru Ebadu</span>
+        <img src="User.png" class="icon_profil" alt="profil">
+      </div>
+    </div>
+  </header>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar_atas">
+        <a href="beranda_guru.html" class="back">
+            <img src="icon_back.png" class="icon_back">
+            <h2>Kembali</h2>
+        </a>
+        <div class="search_bar">
+            <input type="text" id="searchInput" placeholder="Cari">
+            <button class="search_button">
+                <img src="icon_search.png" class="icon_search">
+            </button>
+        </div>
+    </div>
+</nav>
+  
+  <div class="main">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="logo_SMA.png" class="logo_sma">
+      </div>
+      <ul class="button_sidebar">
+        <li class="active">
+          <a href="beranda_guru.html">
+            <img src="icon_beranda.png" class="icon_beranda">
+            <span>Beranda</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_diskusi.png" class="icon_diskusi">
+            <span>Ruang Diskusi</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pengumuman.png" class="icon_pengumuman">
+            <span>Pengumuman</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pesertadidik.png" class="icon_pesertadidik">
+            <span>Peserta Didik</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_laporan.png" class="icon_laporan">
+            <span>Laporan Mengajar</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pelanggaran.png" class="icon_pelanggaran">
+            <span>Laporan Pelanggaran</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="button_logout">
+        <li class="logout">
+          <a href="index.html">
+            <img src="icon_logout.png" class="icon_logout">
+            <span>Keluar</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <main class="content">
+     <div class="navbar_menu">    
+          <a href="management_tugas.html" class="menu ">Semua</a>
+          <a href="management_tugas_terbit.html" class="menu">Terbit</a>
+          <a href="management_tugas_konsep.html" class="menu">Konsep</a>
+          <a href="#" class="menu active">Tutup</a>
+          <a href="management_tugas_arsip.html" class="menu">Arsip</a>
+    </div>
+
+    <div class="kategori">
+        <span>Manajemen Tugas Tutup</span>
+    </div>
+
+    <!-- BUTTON TAMBAH -->
+<div class="top_action">
+    <a href="tambah_tugas.html" class="btn tambah">
+        <img src="icon_tambah.png">
+        Tambah Tugas
+    </a>
+    <div class="filter_scroll">
+    <div class="filter_group">
+
+        <!-- DROPDOWN KELAS -->
+        <div class="dropdown">
+            <div class="dropdown-btn">
+                <span class="selected">Kelas XI FD 1</span>
+                <img src="panah_hitam.png" class="arrow">
+            </div>
+                <div class="dropdown-menu">
+                <div class="text">Kelas XI FD 1</div>
+                <div class="text">Kelas XI FC</div>
+            </div>
+        </div>
+
+        <!-- DROPDOWN TAHUN AJARAN -->
+        <div class="dropdown">
+            <div class="dropdown-btn">
+                <span class="selected">Tahun Ajaran 2025/2026</span>
+                <img src="panah_hitam.png" class="arrow">
+            </div>
+            <div class="dropdown-menu">
+                <div class="text">Tahun Ajaran 2025/2026</div>
+                <div class="text">Tahun Ajaran 2024/2025</div>
+            </div>
+        </div>
+
+        <!-- DROPDOWN SEMESTER -->
+        <div class="dropdown">
+            <div class="dropdown-btn">
+                <span class="selected">Semester Genap</span>
+                <img src="panah_hitam.png" class="arrow">
+            </div>
+            <div class="dropdown-menu">
+                <div class="text">Semester Genap</div>
+                <div class="text">Semester Ganjil</div>
+            </div>
+        </div>
+
+        <!-- DROPDOWN AKSI MASSAL -->
+        <div class="dropdown">
+            <div class="dropdown-btn">
+                <span class="selected">Aksi Massal</span>
+                <img src="panah_hitam.png" class="arrow">
+            </div>
+            <div class="dropdown-menu">
+               <div class="text">Tidak Menjadi Fokus Redesign !</div>
+               <div class="text">Aksi Massal</div>
+            </div>
+        </div>
+    </div>  
+    </div>
+</div>
+
+<!-- CARD -->
+<div class="card_tugas">
+
+  <!-- CARD ITEM -->
+    <div class="card_item"> <!--CARD TUGAS G-->
+        <div class="card_top_right">
+            <span>Tugas</span>
+            <div class="icon_tugas">
+                <img src="icon_tugas.png">
+            </div>
+        </div>
+        <div class="card_header_top">
+        <span class="status tutup">Tutup</span>
+        <span class="mapel">Bahasa Indonesia</span>
+        </div>
+        <h3 class="judul">
+            <a href="detail_tugas_g.html">
+                Membuat Teks Prosedur Kompleks tentang Cara Melakukan Suatu Kegiatan
+            </a>
+        </h3>
+        <div class="card_info">
+            <div class="info_box gabung">
+                <div class="info_item">
+                    <span>Tanggal Terbit</span>
+                    <p>Senin, 5 Jan 2026</p>
+                </div>
+
+                <div class="info_item">
+                    <span>Tanggal Tutup</span>
+                    <p>Selasa, 6 Jan 2026</p>
+                </div>
+            </div>
+            <div class="info_box center">
+                <span>Siswa Mengumpulkan</span>
+                <p>8</p>
+            </div>
+            <div class="info_box kelas">
+                <span>Kelas Penerima</span>
+                <p>Kelas XI FD 1</p>
+            </div>
+            <div class="info_box tanggal">
+                <span>Tanggal Buat</span>
+                <p>Minggu, 4 Jan 2026</p>
+            </div>
+            <div class="aksi_group">
+                <div class="dropdown_aksi">
+                    <div class="dropdown_aksi_btn btn abu">
+                        <span>Aksi</span>
+                        <img src="panah_putih.png" class="arrow">
+                    </div>
+                    <div class="dropdown_aksi_menu">
+                        <a href="detail_tugas.html" class="aksi_item">Detail</a>
+                        <a href="daftar_pengirim_tugas.html" class="aksi_item">Daftar Pengirim</a>
+                        <a href="management_tugas_terbit.html" class="aksi_item">Terbitkan </a>
+                        <a href="perbarui_tugas.html" class="aksi_item">perbarui </a>
+                        <a href="management_tugas_arsip.html" class="aksi_item">Arsipkan</a>
+                        <a href="kosong_guru.html" class="aksi_item">Hapus </a>
+                    </div>
+                </div>
+                <a href="detail_tugas_g.html" class="btn biru">Buka</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ITEM -->
+    <div class="card_item"> <!--CARD TUGAS H-->
+        <div class="card_top_right">
+            <span>Tugas</span>
+            <div class="icon_tugas">
+                <img src="icon_tugas.png">
+            </div>
+        </div>
+        <div class="card_header_top">
+        <span class="status tutup">Tutup</span>
+        <span class="mapel">Bahasa Indonesia</span>
+        </div>
+        <h3 class="judul">
+            <a href="detail_tugas_h.html">
+                Mengidentifikasi Unsur Intrinsik dan Ekstrinsik dalam Novel yang Telah Dibaca
+            </a>
+        </h3>
+        <div class="card_info">
+            <div class="info_box gabung">
+                <div class="info_item">
+                    <span>Tanggal Terbit</span>
+                    <p>Senin, 12 Jan 2026</p>
+                </div>
+
+                <div class="info_item">
+                    <span>Tanggal Tutup</span>
+                    <p>Selasa, 13 Jan 2026</p>
+                </div>
+            </div>
+            <div class="info_box center">
+                <span>Siswa Mengumpulkan</span>
+                <p>8</p>
+            </div>
+            <div class="info_box kelas">
+                <span>Kelas Penerima</span>
+                <p>Kelas XI FD 1</p>
+            </div>
+            <div class="info_box tanggal">
+                <span>Tanggal Buat</span>
+                <p>Minggu, 11 Jan 2026</p>
+            </div>
+            <div class="aksi_group">
+                <div class="dropdown_aksi">
+                    <div class="dropdown_aksi_btn btn abu">
+                        <span>Aksi</span>
+                        <img src="panah_putih.png" class="arrow">
+                    </div>
+                    <div class="dropdown_aksi_menu">
+                        <a href="detail_tugas.html" class="aksi_item">Detail</a>
+                        <a href="daftar_pengirim_tugas.html" class="aksi_item">Daftar Pengirim</a>
+                        <a href="management_tugas_terbit.html" class="aksi_item">Terbitkan </a>
+                        <a href="perbarui_tugas.html" class="aksi_item">perbarui </a>
+                        <a href="management_tugas_arsip.html" class="aksi_item">Arsipkan</a>
+                        <a href="kosong.html" class="aksi_item">Hapus </a>
+                    </div>
+                </div>
+                <a href="detail_tugas_h.html" class="btn biru">Buka</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- CARD ITEM -->
+    <div class="card_item"> <!--CARD TUGAS I-->
+        <div class="card_top_right">
+            <span>Tugas</span>
+            <div class="icon_tugas">
+                <img src="icon_tugas.png">
+            </div>
+        </div>
+        <div class="card_header_top">
+        <span class="status tutup">Tutup</span>
+        <span class="mapel">Bahasa Indonesia</span>
+        </div>
+        <h3 class="judul">
+            <a href="detail_tugas_i.html">
+                Menulis Puisi Bertema Lingkungan dengan Memperhatikan Diksi dan Majas
+            </a>
+        </h3>
+        <div class="card_info">
+            <div class="info_box gabung">
+                <div class="info_item">
+                    <span>Tanggal Terbit</span>
+                    <p>Senin, 19 Jan 2026</p>
+                </div>
+
+                <div class="info_item">
+                    <span>Tanggal Tutup</span>
+                    <p>Selasa, 20 Jan 2026</p>
+                </div>
+            </div>
+            <div class="info_box center">
+                <span>Siswa Mengumpulkan</span>
+                <p>8</p>
+            </div>
+            <div class="info_box kelas">
+                <span>Kelas Penerima</span>
+                <p>Kelas XI FD 1</p>
+            </div>
+            <div class="info_box tanggal">
+                <span>Tanggal Buat</span>
+                <p>Minggu, 18 Jan 2026</p>
+            </div>
+            <div class="aksi_group">
+                <div class="dropdown_aksi">
+                    <div class="dropdown_aksi_btn btn abu">
+                        <span>Aksi</span>
+                        <img src="panah_putih.png" class="arrow">
+                    </div>
+                    <div class="dropdown_aksi_menu">
+                        <a href="detail_tugas.html" class="aksi_item">Detail</a>
+                        <a href="daftar_pengirim_tugas.html" class="aksi_item">Daftar Pengirim</a>
+                        <a href="management_tugas_terbit.html" class="aksi_item">Terbitkan </a>
+                        <a href="perbarui_tugas.html" class="aksi_item">perbarui </a>
+                        <a href="management_tugas_arsip.html" class="aksi_item">Arsipkan</a>
+                        <a href="kosong.html" class="aksi_item">Hapus </a>
+                    </div>
+                </div>
+                <a href="detail_tugas-i.html" class="btn biru">Buka</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    
+</main>
+
+  <footer>
+      Copyright @ 2026 SMAN 2 BANGUNTAPAN. All Rights Reserved
+    </footer>
+    
+    <!-- Animasi Sidebar Javascript-->
+  <script> //Animasi Sidebar Javascript
+      const menuBtn = document.querySelector(".button_menu");
+      const sidebar = document.getElementById("sidebar");
+
+      menuBtn.addEventListener("click", function() {
+      sidebar.classList.toggle("active");
+      });
+  </script>
+
+  <script> //search bar Javascript
+    const searchInput = document.getElementById("searchInput"); //Search Bar
+    const cards = document.querySelectorAll(".card_item");
+
+    searchInput.addEventListener("keyup", function () {
+    const keyword = this.value.toLowerCase();
+
+      cards.forEach(function (card) {
+        const titleEl = card.querySelector(".judul");
+        if (!titleEl) return;
+
+        const title = titleEl.textContent.toLowerCase();
+
+        if (title.includes(keyword)) {
+          card.style.display = "flex";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    });
+
+    const dropdowns = document.querySelectorAll(".dropdown"); //Animasi Drop Down
+
+    dropdowns.forEach(dropdown => {
+    const btn = dropdown.querySelector(".dropdown-btn");
+    const items = dropdown.querySelectorAll(".text");
+    const selected = dropdown.querySelector(".selected");
+
+    // klik buka dropdown
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        // tutup semua dulu
+        dropdowns.forEach(d => d.classList.remove("active"));
+
+        // buka yang diklik
+        dropdown.classList.toggle("active");
+    });
+
+    // pilih item
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+        selected.textContent = item.textContent;
+        dropdown.classList.remove("active");
+        });
+    });
+    });
+
+    // klik luar = tutup semua
+    document.addEventListener("click", () => {
+    dropdowns.forEach(d => d.classList.remove("active"));
+    });
+
+    const dropdownAksi = document.querySelectorAll(".dropdown_aksi"); //Animasi Drop Down Aksi
+
+    dropdownAksi.forEach(drop => {
+    const btn = drop.querySelector(".dropdown_aksi_btn");
+
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        dropdownAksi.forEach(d => d.classList.remove("active"));
+        drop.classList.toggle("active");
+    });
+    });
+
+    document.addEventListener("click", () => {
+    dropdownAksi.forEach(d => d.classList.remove("active"));
+    });
+</script>
+
+
+
+
+</body>
+
+</html>

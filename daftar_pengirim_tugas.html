@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Pengirim Tugas</title>
+    <link rel="stylesheet" href="daftar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+Javanese:wght@400..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <!-- HEADER -->
+  <header class="header">
+    <div class="top-left">
+      <img src="Menu Hambuger.png" class="button_menu" alt="menu">
+      <span class="online">Online 15</span>
+    </div>
+    <div class="top-right">
+      <img src="icon_notif.png" class="notifikasi" alt="notifikasi">
+      <div class="konten">
+        <span class="nama">Nama Guru Ebadu</span>
+        <img src="User.png" class="icon_profil" alt="profil">
+      </div>
+    </div>
+  </header>
+
+    <!-- NAVBAR -->
+<nav class="navbar">
+    <div class="navbar_atas">
+
+        <a href="detail_tugas_a.html" class="back">
+            <img src="icon_back.png" class="icon_back">
+            <h2>Kembali</h2>
+        </a>
+
+        <div class="search_bar">
+            <input type="text" id="searchInput" placeholder="Cari">
+            <button class="search_button">
+                <img src="icon_search.png" class="icon_search">
+            </button>
+        </div>
+
+    </div>
+</nav>
+  
+  <div class="main">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <img src="logo_SMA.png" class="logo_sma">
+      </div>
+      <ul class="button_sidebar">
+        <li class="active">
+          <a href="beranda_guru.html">
+            <img src="icon_beranda.png" class="icon_beranda">
+            <span>Beranda</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_diskusi.png" class="icon_diskusi">
+            <span>Ruang Diskusi</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pengumuman.png" class="icon_pengumuman">
+            <span>Pengumuman</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pesertadidik.png" class="icon_pesertadidik">
+            <span>Peserta Didik</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_laporan.png" class="icon_laporan">
+            <span>Laporan Mengajar</span>
+          </a>
+        </li>
+        <li>
+          <a href="kosong_guru.html">
+            <img src="icon_pelanggaran.png" class="icon_pelanggaran">
+            <span>Laporan Pelanggaran</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="button_logout">
+        <li class="logout">
+          <a href="index.html">
+            <img src="icon_logout.png" class="icon_logout">
+            <span>Keluar</span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </div>
+
+  <main class="content">
+     <div class="navbar_menu">    
+      <a href="#" class="menu active">Semua</a>
+      <a href="belum_mengirim.html" class="menu">Belum Mengirim</a>
+      <a href="belum_dikoreksi.html" class="menu">Belum Dikoreksi</a>
+      <a href="terkoreksi.html" class="menu">Terkoreksi</a>
+    </div>
+
+  <div class="list_siswa">
+
+    <!-- CARD -->
+    <div class="card_siswa">
+      <h3>Andi Pratama</h3>
+      <div class="card_body">
+        <!-- GROUP INFO -->
+        <div class="info_group">
+          <div class="info_box">
+            <span>Kelas</span>
+            <p>Kelas XI FD 1</p>
+          </div>
+          <div class="info_box">
+            <span>Waktu Pengerjaan</span>
+            <p>Senin, 9 Feb 2026</p>
+          </div>
+          <div class="info_box">
+            <span>Nilai Huruf</span>
+            <p>A</p>
+          </div>
+
+          <div class="info_box">
+            <span>Nilai</span>
+            <p>90</p>
+          </div>
+        </div>
+        <!-- AKSI -->
+        <div class="dropdown_aksi">
+          <button class="dropdown_aksi_btn">
+            Aksi <span>▾</span>
+          </button>
+          <div class="dropdown_aksi_menu">
+            <a href="kosong_guru.html">Lihat</a>
+            <a href="kosong_guru.html">Koreksi</a>
+            <a href="kosong_guru.html">Hapus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card_siswa">
+      <h3>Siti Nurhaliza</h3>
+      <div class="card_body">
+        <!-- GROUP INFO -->
+        <div class="info_group">
+          <div class="info_box">
+            <span>Kelas</span>
+            <p>Kelas XI FD 1</p>
+          </div>
+          <div class="info_box">
+            <span>Waktu Pengerjaan</span>
+            <p>Senin, 9 Feb 2026</p>
+          </div>
+          <div class="info_box">
+            <span>Nilai Huruf</span>
+            <p>A</p>
+          </div>
+
+          <div class="info_box">
+            <span>Nilai</span>
+            <p>90</p>
+          </div>
+        </div>
+        <!-- AKSI -->
+        <div class="dropdown_aksi">
+          <button class="dropdown_aksi_btn">
+            Aksi <span>▾</span>
+          </button>
+          <div class="dropdown_aksi_menu">
+            <a href="kosong_guru.html">Lihat</a>
+            <a href="kosong_guru.html">Koreksi</a>
+            <a href="kosong_guru.html">Hapus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card_siswa">
+      <h3>Dimas Saputra</h3>
+      <div class="card_body">
+        <!-- GROUP INFO -->
+        <div class="info_group">
+          <div class="info_box">
+            <span>Kelas</span>
+            <p>Kelas XI FD 1</p>
+          </div>
+          <div class="info_box">
+            <span>Waktu Pengerjaan</span>
+            <p>Senin, 9 Feb 2026</p>
+          </div>
+          <div class="info_box">
+            <span>Nilai Huruf</span>
+            <p>A</p>
+          </div>
+
+          <div class="info_box">
+            <span>Nilai</span>
+            <p>90</p>
+          </div>
+        </div>
+        <!-- AKSI -->
+        <div class="dropdown_aksi">
+          <button class="dropdown_aksi_btn">
+            Aksi <span>▾</span>
+          </button>
+          <div class="dropdown_aksi_menu">
+            <a href="kosong_guru.html">Lihat</a>
+            <a href="kosong_guru.html">Koreksi</a>
+            <a href="kosong_guru.html">Hapus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card_siswa">
+      <h3>Dewi Lestari</h3>
+      <div class="card_body">
+        <!-- GROUP INFO -->
+        <div class="info_group">
+          <div class="info_box">
+            <span>Kelas</span>
+            <p>Kelas XI FD 1</p>
+          </div>
+          <div class="info_box">
+            <span>Waktu Pengerjaan</span>
+            <p>Senin, 9 Feb 2026</p>
+          </div>
+          <div class="info_box">
+            <span>Nilai Huruf</span>
+            <p>A</p>
+          </div>
+
+          <div class="info_box">
+            <span>Nilai</span>
+            <p>90</p>
+          </div>
+        </div>
+        <!-- AKSI -->
+        <div class="dropdown_aksi">
+          <button class="dropdown_aksi_btn">
+            Aksi <span>▾</span>
+          </button>
+          <div class="dropdown_aksi_menu">
+            <a href="kosong_guru.html">Lihat</a>
+            <a href="kosong_guru.html">Koreksi</a>
+            <a href="kosong_guru.html">Hapus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    
+
+    
+</main>
+
+  <footer>
+      Copyright @ 2026 SMAN 2 BANGUNTAPAN. All Rights Reserved
+    </footer>
+    
+    <!-- Animasi Sidebar Javascript-->
+  <script> 
+    const menuBtn = document.querySelector(".button_menu"); 
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", function() {
+    sidebar.classList.toggle("active");
+    });
+
+
+    const dropdownAksi = document.querySelectorAll(".dropdown_aksi"); //Animasi Drop Down Aksi
+
+    dropdownAksi.forEach(drop => {
+    const btn = drop.querySelector(".dropdown_aksi_btn");
+
+    btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        dropdownAksi.forEach(d => d.classList.remove("active"));
+        drop.classList.toggle("active");
+    });
+    });
+
+    document.addEventListener("click", () => {
+    dropdownAksi.forEach(d => d.classList.remove("active"));
+    });
+</script>
+
+
+
+
+</body>
+
+</html>

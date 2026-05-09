@@ -1,0 +1,1111 @@
+body {
+    margin: 0;
+    background: #F2F2F2;
+     height: 100vh;
+     font-family: 'Be Vietnam Pro'; 
+     
+}
+/*HEADER*/ 
+header {
+  position: fixed;      
+  top: 0;               /* agar menempel di atas */
+  left: 225px;
+  width: calc(100% - 225px); /* lebar header = 100% - lebar sidebar */;          
+  height: 58px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+   box-sizing: border-box;
+}
+
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 70px; /* jarak antar grup */
+  margin-left: 15px;
+}
+
+.button_menu {
+  width: 28px;
+  height: 28px;
+  display: block; 
+}
+
+.online {
+  color: #000;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  margin-right: 60px;
+  margin-right: 15px;
+}
+
+.konten {
+  display: flex;
+  align-items: center; /* center logo & text */
+  gap: 20px;
+}
+
+.nama {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.notifikasi {
+  width: 18px;
+  cursor: pointer;
+}
+
+.icon_profil {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+   top: 0px;                 /* tinggi header */
+  width: 225px;
+  height: calc(100vh);
+  background: #1C4E92;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo_sma{
+  width: 200px;
+  display: block; 
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px; /* jarak menu dari atas */
+  gap: 5px;
+}
+
+.sidebar li {
+  padding: 5px 25px;
+  display: flex;
+  align-items: center;  
+  cursor: pointer;
+  transition: 0.1s;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.sidebar li a {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 50px;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar li a span {
+  white-space: nowrap;  /* biar teks 1 baris */
+}
+
+.sidebar li:hover {
+  background: #0F2A4F;
+}
+
+.sidebar .active {
+  background: #0F2A4F;
+}
+
+.button_sidebar{
+  flex: 1;
+  
+}
+.button_logout {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.logout {
+  list-style: none;
+  margin-bottom: 90px; 
+}
+
+.logout a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;           
+ padding: 0; /* area klik */
+  text-decoration: none;
+  color: white;
+}
+
+.icon_beranda{
+    width: 20px;
+    height: 20px;
+}
+  
+.icon_diskusi{
+    width: 20px;
+    height: 20px;
+}
+    
+.icon_pengumuman{
+    width: 20px;
+    height: 20px;
+}
+
+.icon_pesertadidik{
+    width: 23px;
+    height: 20px;
+}
+
+.icon_laporan{
+    width: 20px;
+    height: 18px;
+}
+
+.icon_pelanggaran{
+    width: 25px;
+    height: 20px;
+}
+
+.icon_logout{
+    width: 24px;
+    height: 24px;
+}
+
+/* NAVBAR */
+.navbar{
+  position: sticky; /* bukan fixed lagi */
+  top: 58px; 
+
+  width: calc(100% - 225px);
+  margin-left: 225px; 
+
+  background:#2059A5;
+  padding: 10px 30px;
+
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+  z-index: 999;
+    box-sizing: border-box;
+}
+
+.navbar_atas{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+/* BUTTON BACK */
+.back{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    text-decoration:none;
+    color:white;
+}
+
+.back h2{
+    font-size:16px;
+    font-weight:300;
+}
+
+/* ICON BACK */
+
+.icon_back{
+    width:10.48px;
+    height:23.35px;
+    cursor:pointer;
+}
+
+/* SEARCH */
+.search_bar {
+   background: white;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  width: 370px;
+  height: 40px;
+  overflow: hidden;
+}
+
+.search_bar input {
+  border: none;
+  outline: none;
+  padding: 10px;
+  flex: 1;
+}
+
+.search_button {
+  border: none;
+  background: transparent;
+  padding: 10px;
+}
+
+.content {
+  margin-left: 225px; /* lebar content*/
+  margin-top: 50px;   /* jarak atas */
+  padding: 0 35px;  /* kanan kiri content */
+  background: #F2F2F2;
+}
+
+.navbar_menu {
+   display: flex;
+   justify-content: center;
+   gap: 5px;
+   background: #F2F2F2;
+   padding: 15px 0;
+   margin-top: 10px;
+   margin-bottom: 20px;
+}
+
+.menu {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu.active {
+  background: #0F2A4F;
+  color: white;
+  font-weight: 600
+}
+
+/* JUDUL */
+.kategori {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* TOP ACTION */
+.top_action {
+   display: flex;
+  align-items: center;
+  gap: 20px; 
+  position: relative;
+  z-index: 1;
+}
+
+.btn {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 450;
+  cursor: pointer;
+  display: flex;              
+  align-items: center;        
+  justify-content: center;
+  gap: 10px;
+   text-decoration: none;
+}
+
+.btn.tambah {
+  background: #fff;
+  color: #2C7BE5;
+  border: 1px solid #2C7BE5;
+}
+
+.btn.biru {
+  background: #2C7BE5;
+  color: white;
+  width: 80px;
+}
+
+.btn.abu {
+  background: #4A4A4A;
+  color: white;
+   width: 80px;
+}
+
+.btn.tambah img {
+  width: 20px;
+  height: 20px;
+}
+
+.btn.tambah:hover {
+  background: #2C7BE5;
+  color: #fff;
+}
+
+.btn.biru:hover {
+  background: #0F2A4F;
+  color: white;
+}
+
+.filter_scroll {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+/* GROUP */
+.filter_group {
+  display: flex;
+  gap: 20px;
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: relative;
+  width: 200px;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  color: #404040;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* BUTTON */
+.dropdown-btn {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 10px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* DROPDOWN BUTTON AKSI */
+.dropdown_aksi_btn {
+  justify-content: space-between; /* biar teks kiri, panah kanan */
+}
+
+/* MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+/* SHOW */
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+/* ITEM */
+.text{
+  padding: 10px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.text:hover {
+  background: #f2f2f2;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+}
+
+/* CARD */
+.card_tugas {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card_item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+   position: relative;
+}
+
+.card_top_right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #505050;
+  font-weight: 300;
+}
+
+.icon_tugas {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: #FFB17E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_materi {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: #FF8A8C;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_tes {
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  background: #93E27E;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon_tugas img {
+  width: 20px;
+  height: 20px;
+}
+
+.icon_materi img {
+  width: 15px;
+  height: 20px;
+}
+
+.icon_tes img {
+  width: 20px;
+  height: 25px;
+}
+
+
+/* HEADER CARD */
+.card_header_top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.status {
+  padding: 15px 26px;
+  border-radius: 50px;
+  font-size: 10px;
+}
+
+.status.terbit {
+  background: #E6FFF5;
+  color: #357A5C;
+}
+
+.status.tutup {
+  background: #FFFCDD;
+  color: #88824D;
+}
+
+.status.konsep {
+  background: #F6F6F6;
+  color: #3D3D3D;
+}
+
+.mapel {
+  font-size: 16px;
+  color: #505050;
+  font-weight: 450;
+}
+
+/* JUDUL */
+.judul {
+  font-size: 20px;
+  font-weight: 450;
+  margin-bottom: 15px;
+  margin-top:5px; 
+  margin-left: 90px;
+}
+
+.judul a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HOVER EFFECT */
+.judul a:hover {
+  color: #2C7BE5;
+  text-decoration: underline;
+}
+
+/* INFO */
+.card_info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.info_box.gabung {
+    background: #F2F2F2;
+  display: flex;
+  gap: 30px; /* jarak antar kolom */
+  padding: 12px 16px;
+}
+
+.info_box {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.info_box.tanggal {
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.info_box.kelas{
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 11px;
+}
+
+.info_box p {
+  margin: 3px 0 0;
+  font-weight: 500;
+}
+
+.info_box.center {
+     background: #F2F2F2;
+  text-align: center;
+}
+
+/* AKSI */
+.aksi_group {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+}
+
+/* WRAPPER */
+.dropdown_aksi {
+  position: relative;
+}
+
+/* MENU */
+.dropdown_aksi_menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  min-width: 140px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  display: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdown_aksi.active .dropdown_aksi_menu {
+  display: block;
+}
+
+/* ITEM */
+.aksi_item {
+  display: block;
+  padding: 10px 14px;
+  font-size: 12px;
+  text-decoration: none;
+  color: black;
+}
+
+.aksi_item:hover {
+  background: #f2f2f2;
+}
+
+footer {
+   margin-left: 230px; 
+  padding: 15px 30px;
+  text-align: center;
+  color: #505050;
+  font-size: 12px;
+  font-weight: 300;
+  
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 1280px) {
+    .grid_card {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 450px) and (max-height: 932px)  {
+
+  body{
+  overflow-x: hidden;
+}
+
+    /* HEADER FULL */
+  .header {
+     left: 0;
+    width: 100%;
+    padding: 14px 15px;
+  }
+
+  .nama{
+      display: none;
+    }
+
+    .top-left {
+    gap: 20px; /* jarak antar grup */
+    margin-left: 2px;
+  }
+
+  .top-right {
+    gap: 20px; /* jarak antar grup */
+    margin-right: 2px;
+  }
+
+  /* NAVBAR FULL */
+  .navbar {
+    width: 100%;
+    margin-left: 0;
+      padding: 8px 15px;
+  }
+
+  /* BUTTON BACK */
+  .back{
+      gap:8px;
+  }
+
+  .back h2{
+      font-size:12px;
+      font-weight:300;
+  }
+
+  /* ICON BACK */
+  .icon_back{
+      width:10px;
+      height:19px;
+  }
+
+  .search_bar {
+    width: 280px;
+    height: 40px;
+  }
+
+   .sidebar {
+    position: fixed;
+    top: 58px; 
+    left: 0;
+    width: 225px;
+    height: calc(100% - 58px); /* biar tidak nutup header */
+    background: #1C4E92;
+    transform: translateX(-100%);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+  }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo_sma {
+    width: 160px; /* kecilkan biar muat */
+    margin: 10px auto;
+    display: block;
+  }
+
+  /* CONTENT FULL */
+  .content {
+    margin-left: 0;
+  padding: 15px;
+  margin-top: 22px;
+}
+
+  .navbar_menu {
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+   padding: 10px 0;
+}
+
+  .menu {
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  .judul_halaman{
+    font-size: 16px;
+  }
+
+  .dropdown {
+  width: 170px;
+}
+
+.dropdown-btn {
+  padding: 10px 20px;
+  width: 170px;
+}
+
+  /* CARD JADI 1 KOLOM */
+  .grid_card {
+    grid-template-columns: 1fr;
+  }
+
+  /* KECILKAN CARD */
+  .card {
+    padding: 12px;
+  }
+
+  .judul {
+    font-size: 14px;
+  }
+
+  .mini_box {
+    font-size: 12px;
+  }
+
+  /* HEADER RAPAT */
+  .header {
+    padding: 10px;
+  }
+
+  .top_action{
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 14px;
+}
+
+.btn.tambah{
+   width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+
+  position: relative;
+  z-index: 1;
+}
+
+/* WRAPPER SCROLL */
+.filter_scroll{
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  padding-bottom: 0px;
+    position: relative;
+  z-index: 9999;
+}
+
+.filter_scroll::-webkit-scrollbar{
+  display: none;
+}
+
+/* GROUP */
+.filter_group{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 50px;
+
+  width: max-content;
+  padding-bottom: 5px;
+  position: relative;
+  z-index: 9999;
+}
+
+/* DROPDOWN */
+.dropdown{
+  min-width: 170px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 99999; 
+}
+
+/* MENU */
+.dropdown-menu{
+  position: absolute;
+
+  top: calc(100% + 8px);
+  left: 0;
+
+  min-width: 100%;
+
+  background: #fff;
+  border-radius: 10px;
+
+  display: none;
+
+  z-index: 999999;
+}
+
+.dropdown.active .dropdown-menu{
+  display: block;
+}
+
+.card_item{
+  padding: 18px;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.card_header_top{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.mapel{
+  font-size: 14px;
+  margin-left: 0;
+}
+
+.judul{
+  margin-left: 0;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 700;
+}
+
+
+.card_info{
+  display: grid;
+  grid-template-columns: 1fr 108px;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+/* BOX TANGGAL */
+.info_box.gabung{
+  background: #F2F2F2;
+  border-radius: 10px;
+
+  padding: 14px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* SISWA */
+.info_box.center{
+  background: #F2F2F2;
+  border-radius: 10px;
+
+  padding: 12px 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* BOX BAWAH */
+.info_box.kelas{
+  padding: 0;
+}
+
+.info_box.tanggal{
+  padding: 0;
+  margin-left: -18px;
+}
+
+/* TEXT */
+.info_box span{
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.info_box p{
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #5A5A5A;
+}
+
+/* ===== BUTTON ===== */
+
+.aksi_group{
+  grid-column: 1 / 3;
+
+  width: 100%;
+  margin-top: 18px;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.dropdown_aksi_btn{
+  width: 100%;
+  height: 48px;
+
+  border-radius: 8px;
+  background: #4A4A4A;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 18px;
+  box-sizing: border-box;
+}
+
+.btn.abu,
+.btn.biru{
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  width: 150px;
+}
+
+/*KHUSUS MATERI*/
+.card_materi .card_info{
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  gap: 12px;
+  align-items: stretch;
+}
+
+/* BOX BESAR */
+
+.card_materi .card_info{
+   display: grid;
+  grid-template-columns: 1fr 95px 115px;
+  gap: 12px;
+  margin-top: 10px;
+  align-items: stretch;
+}
+
+/* TANGGAL TERBIT */
+.card_materi .info_box.gabung{
+  background: #F2F2F2;
+  border-radius: 10px;
+
+  padding: 14px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* BOX SISWA */
+.card_materi .info_box.center{
+  background: #F2F2F2;
+  border-radius: 10px;
+
+  padding: 12px 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* KELAS */
+.card_materi .info_box.biasa:first-of-type{
+  padding: 0;
+}
+
+/* TANGGAL BUAT */
+.card_materi .info_box.biasa:last-of-type{
+  padding: 0;
+}
+
+/* TEXT */
+.card_materi .info_box span{
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.card_materi .info_box p{
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #5A5A5A;
+}
+
+/* BUTTON */
+.card_materi .aksi_group{
+  grid-column: 1 / 4;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  margin-top: 18px;
+}
+
+.card_materi .info_box.kelas{
+  grid-column: 1 / 2;
+  width: 100%;
+}
+
+.card_materi .info_box.tanggal{
+  grid-column: 3 / 4;
+
+  width: 100%;
+}
+
+footer {
+    width: 100%;
+    margin-left: 0;
+    box-sizing: border-box;
+    padding-bottom: 50px;
+  }
+}
+  
